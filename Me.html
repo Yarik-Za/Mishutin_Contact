@@ -1,14 +1,96 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>body {text-align: center;}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarik Zaychenko | Contacts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a00, #ff5f00);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            background: #fff;
+            color: #444;
+            text-decoration: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
-<h1>👤 Yarik Zaychenko</h1>
-&#128222; Lifecell: <a href="tel:+380936612615">0936612615</a><br>
-&#128222; Kyivstar: <a href="tel:+380968586206">0968586206</a><br>
-&#128222; Vodafone: <a href="tel:+380951357596">0951357596</a><br><br>
-&#128488; Telegram: <a href="http://t.me/yarik_za" target="_blank">yarik_za</a><br>
-&#128248; Instagram: <a href="http://instagram.com/yarik.za_" target="_blank">instagram.com/yarik.za_</a><br><br>
-&#128231; Email: <a href="mailto:yarikyarik20017@gmail.com">yarikyarik20017@gmail.com</a></li>
+    <div class="container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/100" alt="Logo">
+        </div>
+        <h1>👤 Yarik Zaychenko</h1>
+        <a class="button" href="tel:+380936612615">
+            <img src="https://via.placeholder.com/24" alt="Phone Icon"> Lifecell: 0936612615
+        </a>
+        <a class="button" href="http://t.me/yarik_za">
+            <img src="https://via.placeholder.com/24" alt="Telegram Icon"> Telegram
+        </a>
+        <a class="button" href="mailto:yarikyarik20017@gmail.com">
+            <img src="https://via.placeholder.com/24" alt="Email Icon"> Email
+        </a>
+        <footer>
+            © 2024 Yarik Zaychenko. All rights reserved.
+        </footer>
+    </div>
 </body>
 </html>
