@@ -1,0 +1,75 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a00, #ff5f00);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo img {
+            width: 150px;
+            border-radius: 50%;
+            
+        }
+
+        @font-face {
+            font-family: 'MR_Bold'; /* Уникальное имя для шрифта */
+            src: url('../fonts/Mariupol-Bold.ttf') format('truetype'); /* Путь к файлу шрифта */
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+font-family: 'MR_Bold',;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            background: #fff;
+            color: #444;
+            text-decoration: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
