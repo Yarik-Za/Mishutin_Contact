@@ -30,17 +30,33 @@
             
         }
 
-        @font-face {
-            font-family: 'MR_Bold'; /* Уникальное имя для шрифта */
-            src: url('../fonts/Mariupol-Bold.ttf') format('truetype'); /* Путь к файлу шрифта */
-            font-weight: normal;
-            font-style: normal;
-        }
+       @font-face {
+    font-family: 'MR'; /* Общее имя шрифта */
+    src: url('../fonts/Mariupol-Bold.ttf') format('truetype');
+    font-weight: bold; /* Указываем вес для Bold */
+    font-style: normal; /* Нормальный стиль */
+}
+
+@font-face {
+    font-family: 'MR'; /* Общее имя шрифта */
+    src: url('../fonts/Mariupol-Medium.ttf') format('truetype');
+    font-weight: 500; /* Средний вес для Medium */
+    font-style: normal; /* Нормальный стиль */
+}
+
+@font-face {
+    font-family: 'MR'; /* Общее имя шрифта */
+    src: url('../fonts/Mariupol-Regular.ttf') format('truetype');
+    font-weight: normal; /* Обычный вес для Regular */
+    font-style: normal; /* Нормальный стиль */
+}
+
         
         h1 {
             font-size: 1.8rem;
             margin-bottom: 20px;
-font-family: 'MR_Bold',;
+font-family: 'MR', Arial, sans-serif; /* Добавьте резервные шрифты */;
+font-weight: bold; /* Использует Bold */
         }
 
         .button {
@@ -55,6 +71,8 @@ font-family: 'MR_Bold',;
             margin: 10px 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
+            font-family: 'MR', Arial, sans-serif; /* Добавьте резервные шрифты */;
+font-weight: normal; /* Использует Bold */
         }
 
         .button img {
@@ -72,4 +90,6 @@ font-family: 'MR_Bold',;
             margin-top: 20px;
             font-size: 0.8rem;
             opacity: 0.8;
+            font-family: 'MR', Arial, sans-serif; /* Добавьте резервные шрифты */;
+font-weight: 500; /* Использует Bold */
         }
