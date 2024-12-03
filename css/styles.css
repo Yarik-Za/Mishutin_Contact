@@ -42,18 +42,27 @@ font-weight: 500; /* Использует medium */
         }
 
         .container {
-            margin: 0 auto; /* Центрирование контейнера по горизонтали */
-            padding: 10px; /* Отступы по 10px со всех сторон */
+            margin: 0 auto;
+            padding: 10px; /*  отступы по 10px */
             max-width: 350px;
             background: rgba(255, 255, 255, 0.2);
-            padding: 10px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center; /* Центрирование содержимого */
+            position: relative; /* Для позиционирования кнопок */
         }
-
+        
+        
+        .avatar {
+            position: relative; /* Контейнер для аватара и кнопок */
+        }
+        
         .avatar img {
             width: 150px;
-            border-radius: 50%;
+            height: 150px; /* Явно задаем высоту */
+            border-radius: 50%; /* Круглый аватар */
+            display: block; /* Центрирование аватара */
+            margin: 0 auto; /* Горизонтальное центрирование */
         }
 
         h1 {
@@ -129,40 +138,44 @@ font-weight: 500; /* Использует medium */
 
 /* round buttons */
 .button-container {
-    position: relative; /* Позиционирование относительно родительского контейнера */
+    position: absolute; /* Кнопки над аватаром */
+    top: 50%; /* Выравнивание по вертикали */
+    left: 10px; /* Сместим кнопки влево */
+    transform: translateY(-50%); /* Центрирование по вертикали */
     display: flex;
     flex-direction: column; /* Вертикальное расположение кнопок */
-    justify-content: center;
-    align-items: center;
     gap: 10px; /* Расстояние между кнопками */
-    margin-top: -50px; /* Для выравнивания кнопок по центру аватара */
 }
 
 .round-button {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #ff7a00, #ff4f00); /* Градиент */
+    background: linear-gradient(135deg, #ff9a00, #ff5f00); /* Яркий градиент */
     color: #fff;
-    font-family: 'MR', Arial, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 40px; /* Центрирование текста */
     border-radius: 50%; /* Круглая форма */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
+
+    /* Центрирование содержимого */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .round-button:hover {
     transform: scale(1.1); /* Лёгкое увеличение при наведении */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Усиленная тень */
+    background: linear-gradient(135deg, #ffbf00, #ff6600); /* Изменение градиента при наведении */
 }
 
 .round-button img {
-    width: 20px; /* Иконка внутри кнопки */
+    width: 20px; /* Размер изображения */
     height: 20px;
 }
+
+
+
 
         
         
