@@ -26,3 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ageElement.textContent = age;
     }
 });
+
+function changeLanguage() {
+    // Redirect to your language-specific page or toggle language.
+    window.location.href = "/en"; // Update with your language-specific URL.
+}
+

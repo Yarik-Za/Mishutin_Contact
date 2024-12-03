@@ -51,14 +51,11 @@ font-weight: 500; /* Использует medium */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .logo img {
+        .avatar img {
             width: 150px;
             border-radius: 50%;
         }
 
-   
-
-        
         h1 {
             font-size: 2rem;
     margin-bottom: 10px; /* Отступ снизу */
@@ -129,5 +126,44 @@ font-weight: 500; /* Использует medium */
             line-height: 1; /* Уменьшаем высоту строки */
             border-radius: 25px; /* Закругление углов фона */
         }
+
+/* round buttons */
+.button-container {
+    position: relative; /* Позиционирование относительно родительского контейнера */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение кнопок */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Расстояние между кнопками */
+    margin-top: -50px; /* Для выравнивания кнопок по центру аватара */
+}
+
+.round-button {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ff7a00, #ff4f00); /* Градиент */
+    color: #fff;
+    font-family: 'MR', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px; /* Центрирование текста */
+    border-radius: 50%; /* Круглая форма */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.round-button:hover {
+    transform: scale(1.1); /* Лёгкое увеличение при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.round-button img {
+    width: 20px; /* Иконка внутри кнопки */
+    height: 20px;
+}
+
+        
         
         

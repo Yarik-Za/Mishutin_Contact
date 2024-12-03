@@ -8,11 +8,22 @@
     
 </head>
 <body>
+    <!-- main form -->
     <div class="container">
-        <div class="logo">
-            <img src="images/ava.JPG" alt="Logo">
-
+        <div class="avatar">
+            <img src="images/ava.png" alt="Avatar">
+            <div class="button-container">
+                <!-- Кнопка смены языка -->
+                <div class="round-button" onclick="changeLanguage()">EN</div>
+    
+                <!-- Кнопка скачивания контакта -->
+                <a class="round-button" href="/files/contact.vcf" download>
+                    <img src="images/add-contact.png" alt="Add Contact">
+                </a>
+            </div>
         </div>
+
+        
         <h1>Ярик Зайченко🐰</h1>
         <div class="info-block">
             Возраст: <span id="age"></span> лет
