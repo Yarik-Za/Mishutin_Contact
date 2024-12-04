@@ -1,7 +1,11 @@
-// Текущий язык
-let currentLanguage = "ua";
+let currentLanguage = "ua"; // Язык по умолчанию
+const availableLanguages = ["ua", "ru", "en"]; // Список поддерживаемых языков
 
-// Загрузка переводов из JSON
+function getLanguageFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("lang") || "ua"; // Если язык не указан, используем "ua"
+}
+
 async function loadTranslations(lang) {
     try {
         const response = await fetch(`locales/${lang}.json`);
@@ -20,26 +24,20 @@ async function loadTranslations(lang) {
         document.getElementById("monobank-label").textContent = translations.monobank_label;
         document.getElementById("privat-label").textContent = translations.privat_label;
         document.getElementById("tips-label").textContent = translations.tips_label;
+
+        // Обновляем текст кнопки языка
+        const languageButton = document.getElementById("language-button");
+        const nextLangIndex = (availableLanguages.indexOf(lang) + 1) % availableLanguages.length;
+        const nextLang = availableLanguages[nextLangIndex];
+        languageButton.textContent = nextLang.toUpperCase();
+        languageButton.href = `?lang=${nextLang}`;
     } catch (error) {
         console.error("Ошибка загрузки перевода:", error);
     }
 }
 
-// Смена языка
-function changeLanguage() {
-    currentLanguage = currentLanguage === "ru" ? "en" : "ru";
-    loadTranslations(currentLanguage);
-}
-
 // Инициализация
 document.addEventListener("DOMContentLoaded", () => {
+    currentLanguage = getLanguageFromUrl(); // Определяем язык из URL
     loadTranslations(currentLanguage);
-
-    // Кнопка для смены языка
-    const languageButton = document.createElement("button");
-    languageButton.textContent = "Change Language";
-    languageButton.onclick = changeLanguage;
-    document.body.appendChild(languageButton);
 });
-
-
