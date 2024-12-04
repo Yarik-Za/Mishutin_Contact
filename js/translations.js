@@ -1,29 +1,45 @@
-// Функция загрузки перевода
+// Текущий язык
+let currentLanguage = "ua";
+
+// Загрузка переводов из JSON
 async function loadTranslations(lang) {
     try {
         const response = await fetch(`locales/${lang}.json`);
         const translations = await response.json();
 
-        // Обновляем текстовые элементы
+        // Применяем переводы
         document.title = translations.title;
-        document.querySelector("h1").textContent = translations.name;
+        document.getElementById("name").textContent = translations.name;
         document.getElementById("age-label").textContent = translations.age_label;
         document.getElementById("birth-date-label").textContent = translations.birth_date_label;
-        document.querySelector(".section-divider span").textContent = translations.phone_label;
-
-        // Другие переводы
-
-
-        
-        // Добавляйте идентификаторы или классы, чтобы динамически менять контент
+        document.getElementById("phone-label").textContent = translations.phone_label;
+        document.getElementById("social-label").textContent = translations.social_label;
+        document.getElementById("email-label").textContent = translations.email_label;
+        document.getElementById("resume-label").textContent = translations.resume_label;
+        document.getElementById("finance-label").textContent = translations.finance_label;
+        document.getElementById("monobank-label").textContent = translations.monobank_label;
+        document.getElementById("privat-label").textContent = translations.privat_label;
+        document.getElementById("tips-label").textContent = translations.tips_label;
     } catch (error) {
-        console.error("Error loading translations:", error);
+        console.error("Ошибка загрузки перевода:", error);
     }
 }
 
-// Определяем текущий язык из URL
-const urlParams = new URLSearchParams(window.location.search);
-const lang = urlParams.get("lang") || "ru"; // По умолчанию русский
+// Смена языка
+function changeLanguage() {
+    currentLanguage = currentLanguage === "ru" ? "en" : "ru";
+    loadTranslations(currentLanguage);
+}
 
-// Загружаем перевод
-loadTranslations(lang);
+// Инициализация
+document.addEventListener("DOMContentLoaded", () => {
+    loadTranslations(currentLanguage);
+
+    // Кнопка для смены языка
+    const languageButton = document.createElement("button");
+    languageButton.textContent = "Change Language";
+    languageButton.onclick = changeLanguage;
+    document.body.appendChild(languageButton);
+});
+
+
