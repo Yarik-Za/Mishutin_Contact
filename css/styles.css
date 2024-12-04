@@ -78,7 +78,8 @@ font-weight: 500; /* Использует medium */
         .button {
             display: flex;
             align-items: center;
-            justify-content: left;
+            /* justify-content: left; */
+            justify-content: flex-start; /* Выравнивание элементов по левому краю */
             background: #fff;
             color: #444;
             text-decoration: none;
@@ -89,6 +90,7 @@ font-weight: 500; /* Использует medium */
             transition: all 0.3s;
             font-family: 'MR', Arial, sans-serif; /* Добавьте резервные шрифты */;
 font-weight: normal; /* Использует normal */
+gap: 10px; /* Добавляем отступ между иконкой и текстом */
         }
 
         .button img {
@@ -172,4 +174,12 @@ font-weight: 500; /* Использует medium */
 .round-button img {
     width: 20px; /* Размер изображения */
     height: 20px;
+}
+
+.email-text {
+    font-size: 10px; /* Уменьшаем размер шрифта для почты */
+}
+
+.email-label {
+    font-size: 10px;
 }
