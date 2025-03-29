@@ -161,8 +161,35 @@ font-weight: 500; /* Использует medium */
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: pulse 1.5s infinite;
+
+    background: linear-gradient(135deg, #ff5f00, #ff0000); /* Красный градиент */
+    border: 3px solid white; /* Белая обводка */
+
+    box-shadow: 0 6px 15px rgba(255, 95, 0, 0.7); /* Усиленная тень всегда */
+    
+    position: relative;
+    overflow: hidden;
+
+    /* animation: pulse 1.5s infinite; */
 }
+
+.round-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 10%, transparent 80%);
+    transform: rotate(30deg);
+    animation: shine 2s infinite linear;
+}
+
+@keyframes shine {
+    0% { transform: translate(-100%, -100%) rotate(30deg); }
+    100% { transform: translate(100%, 100%) rotate(30deg); }
+}
+
 @keyframes pulse {
     0% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 95, 0, 0.5); }
     50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(255, 95, 0, 0.8); }
