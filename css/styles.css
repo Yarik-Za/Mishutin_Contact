@@ -162,8 +162,8 @@ font-weight: 500; /* Использует medium */
     align-items: center;
     justify-content: center;
 
-    background: linear-gradient(135deg, #ff5f00, #ff0000); /* Красный градиент */
-    border: 3px solid white; /* Белая обводка */
+    /*background: linear-gradient(135deg, #ff5f00, #ff0000); /* Красный градиент */
+    border: 1px solid white; /* Белая обводка */
 
     box-shadow: 0 6px 15px rgba(255, 95, 0, 0.7); /* Усиленная тень всегда */
     
@@ -189,13 +189,6 @@ font-weight: 500; /* Использует medium */
     0% { transform: translate(-100%, -100%) rotate(30deg); }
     100% { transform: translate(100%, 100%) rotate(30deg); }
 }
-
-@keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 95, 0, 0.5); }
-    50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(255, 95, 0, 0.8); }
-    100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 95, 0, 0.5); }
-}
-
 
 
 .round-button:hover {
