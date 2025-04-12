@@ -86,13 +86,12 @@ h1 {
   transition: all 0.3s;
   font-family: "MR", Arial, sans-serif; /* Добавьте резервные шрифты */
   font-weight: normal; /* Использует normal */
-  gap: 10px; /* Добавляем отступ между иконкой и текстом */
 }
 
 .button img {
   width: 24px;
   height: 24px;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
 .button:hover {
@@ -161,6 +160,56 @@ footer {
   justify-content: center;
 }
 
+.round-button-animated {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff9a00, #ff5f00); /* Яркий градиент */
+  color: #fff;
+  border-radius: 50%; /* Круглая форма */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+
+  /* Центрирование содержимого */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid white; /* Белая обводка */
+
+  box-shadow: 0 6px 15px rgba(255, 95, 0, 0.7); /* Усиленная тень всегда */
+
+  position: relative;
+  overflow: hidden;
+
+  /* animation: pulse 1.5s infinite; */
+}
+
+.round-button-animated::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 10%,
+    transparent 80%
+  );
+  transform: rotate(30deg);
+  animation: shine 2s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    transform: translate(-100%, -100%) rotate(30deg);
+  }
+  100% {
+    transform: translate(100%, 100%) rotate(30deg);
+  }
+}
+
 .round-button:hover {
   transform: scale(1.1); /* Лёгкое увеличение при наведении */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Усиленная тень */
@@ -176,10 +225,7 @@ footer {
   height: 20px;
 }
 
-.email-text {
-  font-size: 10px; /* Уменьшаем размер шрифта для почты */
-}
-
-.email-label {
-  font-size: 10px;
+.round-button-animated img {
+  width: 20px; /* Размер изображения */
+  height: 20px;
 }
