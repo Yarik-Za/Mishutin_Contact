@@ -234,29 +234,18 @@ footer {
   text-indent: 0.2em; /* Это будет более точно соответствовать одному пробелу */
 }
 
-.animate-drop {
-  animation: fadeBounceDrop 0.8s ease-out forwards;
-}
-
-@keyframes fadeBounceDrop {
-  0% {
-    transform: translateY(-200px);
+@keyframes fadeDrop {
+  from {
     opacity: 0;
+    transform: translateY(40px);
   }
-  60% {
-    transform: translateY(30px);
+  to {
     opacity: 1;
-  }
-  75% {
-    transform: translateY(-15px);
-  }
-  90% {
-    transform: translateY(5px);
-  }
-  100% {
     transform: translateY(0);
-    opacity: 1;
   }
+}
+.animate-drop {
+  animation: fadeDrop 0.8s ease-out forwards;
 }
 
 .avatar,
@@ -268,3 +257,55 @@ footer {
   opacity: 0;
 }
 
+/* Прелоадер — фон + центрирование */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Отдельный контейнер, чтобы не мешать .container из лендинга */
+.preloader-circles {
+  position: relative;
+  top: 20%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Кружочки */
+.preloader-circles .circle {
+  position: absolute;
+  background: transparent;
+  width: calc(var(--i) * 2.5vmin);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 255, 13);
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) translateZ(50px);
+  animation: animate 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+  box-shadow: 0 0 15px rgb(124, 124, 124),
+              inset 0 0 15px rgb(124, 124, 124);
+}
+
+@keyframes animate {
+  0%, 100% {
+    transform: rotateX(70deg) translateZ(50px) translateY(0);
+    filter: hue-rotate(0);
+  }
+
+  50% {
+    transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Скрыть прелоадер после загрузки */
+.hidden {
+  display: none;
+}

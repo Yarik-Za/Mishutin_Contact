@@ -38,11 +38,11 @@ async function loadTranslations(lang) {
       { id: "phone-label", key: "phone_label" },
       { id: "social-label", key: "social_label" },
       { id: "email-label", key: "email_label" },
-      { id: "resume-label", key: "resume_label" },
+     //{ id: "resume-label", key: "resume_label" },
       { id: "finance-label", key: "finance_label" },
       { id: "monobank-label", key: "monobank_label" },
       { id: "privat-label", key: "privat_label" },
-      { id: "tips-label", key: "tips_label" },
+      //{ id: "tips-label", key: "tips_label" },
     ];
 
     // Обновляем текст всех элементов

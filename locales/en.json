@@ -7,10 +7,10 @@
   "birth_date": "July 7th, 2004",
   "phone_label": "Phone",
   "social_label": "Social",
-  "email_label": "Email: ",
-  "resume_label": "My CV",
+  "email_label": "Email:",
+  
   "finance_label": "Finance",
   "monobank_label": "Send Money to Monobank",
-  "privat_label": "Send Money to PrivatBank",
-  "tips_label": "Tip Calculator"
+  "privat_label": "Send Money to PrivatBank"
+  
 }

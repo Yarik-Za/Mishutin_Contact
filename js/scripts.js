@@ -23,15 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   document.getElementById("age").textContent = age;
 
-
   // Анимация поэтапная
-  const elementsToAnimate = document.querySelectorAll(
+  const elements = document.querySelectorAll(
     ".avatar, h1, .info-block, .section-divider, a.button, footer"
   );
 
-  elementsToAnimate.forEach((el, index) => {
+  elements.forEach((el, index) => {
     setTimeout(() => {
       el.classList.add("animate-drop");
-    }, index * 100); // Чем выше число, тем медленнее «выпадение» по очереди
+    }, index * 100); // Задержка для последовательного появления
+  });
+
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hidden");
   });
 });

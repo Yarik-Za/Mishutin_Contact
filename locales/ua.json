@@ -7,10 +7,10 @@
   "birth_date": "7 липня 2004",
   "phone_label": "Телефон",
   "social_label": "Соц. Мережі",
-  "email_label": "Ел.Пошта: ",
-  "resume_label": "Резюме",
+  "email_label": "Ел.Пошта:",
+  
   "finance_label": "Фінанси",
   "monobank_label": "Відправити переказ Monobank",
-  "privat_label": "Відправити переказ ПриватБанк",
-  "tips_label": "Калькулятор чайових"
+  "privat_label": "Відправити переказ ПриватБанк"
+  
 }
