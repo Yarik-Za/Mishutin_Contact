@@ -36,6 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
+
+    // Плавное исчезновение
     preloader.classList.add("hidden");
+
+    // Ждем завершения перехода (0.6s), затем убираем полностью
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 600);
   });
 });

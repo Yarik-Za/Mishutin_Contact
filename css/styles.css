@@ -257,16 +257,23 @@ footer {
   opacity: 0;
 }
 
-/* Прелоадер — фон + центрирование */
 #preloader {
   position: fixed;
   inset: 0;
-  background: #000;
+  background-color: #000;
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
 }
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
 
 /* Отдельный контейнер, чтобы не мешать .container из лендинга */
 .preloader-circles {
@@ -305,7 +312,3 @@ footer {
   }
 }
 
-/* Скрыть прелоадер после загрузки */
-.hidden {
-  display: none;
-}
