@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Автоматический расчет возраста
   // Возраст
-  const birthDate = new Date(2004, 7, 7); // Укажите свою дату
+  const birthDate = new Date(2004, 6, 7); // 7 июля 2004 на JavaScript
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
 

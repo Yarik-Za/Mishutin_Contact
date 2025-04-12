@@ -19,6 +19,7 @@ async function loadTranslations(lang) {
     const elementsToTranslate = [
       { id: "name", key: "name" },
       { id: "age-label", key: "age_label" },
+      { id: "age-years-text", key: "age_years_text" },
       { id: "birth-date-label", key: "birth_date_label" },
       { id: "phone-label", key: "phone_label" },
       { id: "social-label", key: "social_label" },
