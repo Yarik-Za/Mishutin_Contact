@@ -1,12 +1,14 @@
 window.addEventListener("load", () => {
-  // Получаем текущий год
+  // Выполняем после полной загрузки страницы, скриптов, стилей и прочего
+
+  // Расчет текущего года
   const currentYear = new Date().getFullYear();
   const yearElement = document.getElementById("year_creation");
   if (yearElement) {
     yearElement.textContent = currentYear;
   }
 
-  // Автоматический расчет возраста
+  // Расчет возраста
   const birthDate = new Date(2004, 6, 7); // 7 июля 2004
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
@@ -17,27 +19,26 @@ window.addEventListener("load", () => {
   ) {
     age--;
   }
-  const ageElement = document.getElementById("age");
-  if (ageElement) {
-    ageElement.textContent = age;
-  }
+  document.getElementById("age").textContent = age;
 
-  // Прелоадер скрывается после полной готовности
+  // TODO: Подгрузи переводы перед снятием прелоадера, если translations.js работает асинхронно
+
+  // После установки всех данных — убираем прелоадер
   const preloader = document.getElementById("preloader");
-  if (preloader) {
-    preloader.classList.add("hidden");
-    setTimeout(() => {
-      preloader.style.display = "none";
-    }, 800); // совпадает с transition в CSS
-  }
-  // Анимация поэтапная
-  const elements = document.querySelectorAll(
-    ".avatar, h1, .info-block, .section-divider, a.button, footer"
-  );
+  preloader.classList.add("hidden");
 
-  elements.forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add("animate-drop");
-    }, index * 100);
-  });
+  // Удаляем прелоадер после анимации скрытия
+  setTimeout(() => {
+    preloader.style.display = "none";
+
+    // Только теперь запускаем анимацию появления элементов
+    const elements = document.querySelectorAll(
+      ".avatar, h1, .info-block, .section-divider, a.button, footer"
+    );
+    elements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("animate-drop");
+      }, index * 100);
+    });
+  }, 600);
 });
