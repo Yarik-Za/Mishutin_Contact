@@ -1,0 +1,16 @@
+{
+  "title": "Yarik Zaichenko | Contacts",
+  "name": "Yarik Zaichenko🐰",
+  "age_label": "Age:",
+  "age_years_text": "Years old",
+  "birth_date_label": "BirthDay",
+  "birth_date": "July 7th, 2004",
+  "phone_label": "Phone",
+  "social_label": "Social",
+  "email_label": "Email:",
+  
+  "finance_label": "Finance",
+  "monobank_label": "Send Money to Monobank",
+  "privat_label": "Send Money to PrivatBank"
+  
+}

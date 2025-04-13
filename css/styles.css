@@ -1,210 +1,316 @@
 @font-face {
-    font-family: 'MR'; /* Общее имя шрифта */
-    src: url('../fonts/Mariupol-Bold.ttf') format('truetype');
-    font-weight: bold; /* Указываем вес для Bold */
-    font-style: normal; /* Нормальный стиль */
-    }
+  font-family: "MR"; /* Общее имя шрифта */
+  src: url("../fonts/Mariupol-Bold.ttf") format("truetype");
+  font-weight: bold; /* Указываем вес для Bold */
+  font-style: normal; /* Нормальный стиль */
+}
 
-    @font-face {
-        font-family: 'MR'; /* Общее имя шрифта */
-        src: url('../fonts/Mariupol-Medium.ttf') format('truetype');
-        font-weight: 500; /* Средний вес для Medium */
-        font-style: normal; /* Нормальный стиль */
-    }
+@font-face {
+  font-family: "MR"; /* Общее имя шрифта */
+  src: url("../fonts/Mariupol-Medium.ttf") format("truetype");
+  font-weight: 500; /* Средний вес для Medium */
+  font-style: normal; /* Нормальный стиль */
+}
 
-    @font-face {
-        font-family: 'MR'; /* Общее имя шрифта */
-        src: url('../fonts/Mariupol-Regular.ttf') format('truetype');
-        font-weight: normal; /* Обычный вес для Regular */
-        font-style: normal; /* Нормальный стиль */
-    }
-       
-       
-       
-       * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+@font-face {
+  font-family: "MR"; /* Общее имя шрифта */
+  src: url("../fonts/Mariupol-Regular.ttf") format("truetype");
+  font-weight: normal; /* Обычный вес для Regular */
+  font-style: normal; /* Нормальный стиль */
+}
 
-        body {
-            font-family: 'MR', Arial, sans-serif; /* Добавьте резервные шрифты */;
-font-weight: 500; /* Использует medium */
-            background: linear-gradient(135deg, #ff9a00, #ff5f00);
-            color: #fff;
-            text-align: center;
-            display: block;
-            padding: 10px 0; /* Отступы сверху и снизу */
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        .container {
-            margin: 0 auto;
-            padding: 10px; /*  отступы по 10px */
-            max-width: 350px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            text-align: center; /* Центрирование содержимого */
-            position: relative; /* Для позиционирования кнопок */
-        }
-        
-        
-        .avatar {
-            position: relative; /* Контейнер для аватара и кнопок */
-        }
-        
-        .avatar img {
-            width: 150px;
-            height: 150px; /* Явно задаем высоту */
-            border-radius: 50%; /* Круглый аватар */
-            display: block; /* Центрирование аватара */
-            margin: 0 auto; /* Горизонтальное центрирование */
-        }
+body {
+  font-family: "MR", Arial, sans-serif; /* Добавьте резервные шрифты */
+  font-weight: 500; /* Использует medium */
+  background: linear-gradient(135deg, #ff9a00, #ff5f00);
+  color: #fff;
+  text-align: center;
+  display: block;
+  padding: 10px 0; /* Отступы сверху и снизу */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-        h1 {
-            font-size: 2rem;
-    margin-bottom: 10px; /* Отступ снизу */
-            font-family: 'MR', Arial, sans-serif; /* Добавьте резервные шрифты */;
-            font-weight: bold; /* Использует Bold */
-        }
+.container {
+  margin: 0 auto;
+  padding: 10px; /*  отступы по 10px */
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center; /* Центрирование содержимого */
+  position: relative; /* Для позиционирования кнопок */
+}
+
+.avatar {
+  position: relative; /* Контейнер для аватара и кнопок */
+}
+
+.avatar img {
+  width: 100%;
+  max-width: 150px;
+  height: auto; /* Автоматическая высота по пропорциям */
+  border-radius: 50%; /* Круглый аватар */
+  display: block; /* Центрирование аватара */
+  margin: 0 auto; /* Горизонтальное центрирование */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px; /* Отступ снизу */
+  font-family: "MR", Arial, sans-serif; /* Добавьте резервные шрифты */
+  font-weight: bold; /* Использует Bold */
+}
 /* Блоки текста */
 .info-block {
-    margin-bottom: 5px; /* Отступ между блоками */
+  margin-bottom: 5px; /* Отступ между блоками */
 }
-        .button {
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            background: #fff;
-            color: #444;
-            text-decoration: none;
-            border-radius: 25px;
-            padding: 10px 20px;
-            margin: 10px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-            font-family: 'MR', Arial, sans-serif; /* Добавьте резервные шрифты */;
-font-weight: normal; /* Использует normal */
-        }
+.button {
+  display: flex;
+  align-items: center;
+  /* justify-content: left; */
+  justify-content: flex-start; /* Выравнивание элементов по левому краю */
+  background: #fff;
+  color: #444;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  font-family: "MR", Arial, sans-serif; /* Добавьте резервные шрифты */
+  font-weight: normal; /* Использует normal */
+}
 
-        .button img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
+.button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 7px;
+}
 
-        .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-        }
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
 
-        footer {
-            margin-top: 20px;
-            font-size: 0.8rem;
-            opacity: 0.8;
-            font-family: 'MR', Arial, sans-serif; /* Добавьте резервные шрифты */;
-font-weight: 500; /* Использует medium */
-        }
-        .section-divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0; /* Отступы сверху и снизу */
-            position: relative;
-        }
-        
-        .section-divider::before,
-        .section-divider::after {
-            content: '';
-            flex: 1;
-            height: 2px;
-            background: rgba(199, 188, 208, 0.6); /* Полупрозрачный серый для линий */
-            margin: 0 5px; /* Расстояние от текста до линий */
-        }
-        
-        .section-divider span {
-            font-size: 10pt; /* Размер текста */
-            font-weight: 500;
-            color: #444; /* Тёмно-серый цвет текста */
-            background: rgba(199, 188, 208, 0.7); /* Светлый полупрозрачный фон */
-            padding: 0 5px; /* Отступы вокруг текста */
-            line-height: 1; /* Уменьшаем высоту строки */
-            border-radius: 25px; /* Закругление углов фона */
-        }
+footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-family: "MR", Arial, sans-serif; /* Добавьте резервные шрифты */
+  font-weight: 500; /* Использует medium */
+}
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0; /* Отступы сверху и снизу */
+  position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: rgba(199, 188, 208, 0.6); /* Полупрозрачный серый для линий */
+  margin: 0 5px; /* Расстояние от текста до линий */
+}
+
+.section-divider span {
+  font-size: 10pt; /* Размер текста */
+  font-weight: 500;
+  color: #444; /* Тёмно-серый цвет текста */
+  background: rgba(199, 188, 208, 0.7); /* Светлый полупрозрачный фон */
+  padding: 0 5px; /* Отступы вокруг текста */
+  line-height: 1; /* Уменьшаем высоту строки */
+  border-radius: 25px; /* Закругление углов фона */
+}
 
 /* round buttons */
 .button-container {
-    position: absolute; /* Кнопки над аватаром */
-    top: 50%; /* Выравнивание по вертикали */
-    left: 10px; /* Сместим кнопки влево */
-    transform: translateY(-50%); /* Центрирование по вертикали */
-    display: flex;
-    flex-direction: column; /* Вертикальное расположение кнопок */
-    gap: 10px; /* Расстояние между кнопками */
+  position: absolute; /* Кнопки над аватаром */
+  top: 50%; /* Выравнивание по вертикали */
+  left: 10px; /* Сместим кнопки влево */
+  transform: translateY(-50%); /* Центрирование по вертикали */
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение кнопок */
+  gap: 10px; /* Расстояние между кнопками */
 }
 
 .round-button {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #ff9a00, #ff5f00); /* Яркий градиент */
-    color: #fff;
-    border-radius: 50%; /* Круглая форма */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff9a00, #ff5f00); /* Яркий градиент */
+  color: #fff;
+  border-radius: 50%; /* Круглая форма */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 
-    /* Центрирование содержимого */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    /*background: linear-gradient(135deg, #ff5f00, #ff0000); /* Красный градиент */
-    border: 1px solid white; /* Белая обводка */
-
-    box-shadow: 0 6px 15px rgba(255, 95, 0, 0.7); /* Усиленная тень всегда */
-    
-    position: relative;
-    overflow: hidden;
-
-    /* animation: pulse 1.5s infinite; */
+  /* Центрирование содержимого */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.round-button::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.4) 10%, transparent 80%);
-    transform: rotate(30deg);
-    animation: shine 2s infinite linear;
+.round-button-animated {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff9a00, #ff5f00); /* Яркий градиент */
+  color: #fff;
+  border-radius: 50%; /* Круглая форма */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+
+  /* Центрирование содержимого */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid white; /* Белая обводка */
+
+  box-shadow: 0 6px 15px rgba(255, 95, 0, 0.7); /* Усиленная тень всегда */
+
+  position: relative;
+  overflow: hidden;
+
+  /* animation: pulse 1.5s infinite; */
+}
+
+.round-button-animated::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 10%,
+    transparent 80%
+  );
+  transform: rotate(30deg);
+  animation: shine 2s infinite linear;
 }
 
 @keyframes shine {
-    0% { transform: translate(-100%, -100%) rotate(30deg); }
-    100% { transform: translate(100%, 100%) rotate(30deg); }
+  0% {
+    transform: translate(-100%, -100%) rotate(30deg);
+  }
+  100% {
+    transform: translate(100%, 100%) rotate(30deg);
+  }
 }
 
-
 .round-button:hover {
-    transform: scale(1.1); /* Лёгкое увеличение при наведении */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Усиленная тень */
-    background: linear-gradient(135deg, #ffbf00, #ff6600); /* Изменение градиента при наведении */
+  transform: scale(1.1); /* Лёгкое увеличение при наведении */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Усиленная тень */
+  background: linear-gradient(
+    135deg,
+    #ffbf00,
+    #ff6600
+  ); /* Изменение градиента при наведении */
 }
 
 .round-button img {
-    width: 20px; /* Размер изображения */
-    height: 20px;
+  width: 20px; /* Размер изображения */
+  height: 20px;
 }
 
+.round-button-animated img {
+  width: 20px; /* Размер изображения */
+  height: 20px;
+}
 
+.email-text {
+  text-indent: 0.2em; /* Это будет более точно соответствовать одному пробелу */
+}
 
+.animate-drop {
+  animation: fadeDrop 0.8s ease-out forwards;
+}
 
-        
-        
-        
+@keyframes fadeDrop {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.avatar,
+h1,
+.info-block,
+.section-divider,
+a.button,
+footer {
+  opacity: 0;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Отдельный контейнер, чтобы не мешать .container из лендинга */
+.preloader-circles {
+  position: relative;
+  top: 20%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Кружочки */
+.preloader-circles .circle {
+  position: absolute;
+  background: transparent;
+  width: calc(var(--i) * 2.5vmin);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 255, 13);
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) translateZ(50px);
+  animation: animate 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+  box-shadow: 0 0 15px rgb(124, 124, 124), inset 0 0 15px rgb(124, 124, 124);
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: rotateX(70deg) translateZ(50px) translateY(0);
+    filter: hue-rotate(0);
+  }
+
+  50% {
+    transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+    filter: hue-rotate(360deg);
+  }
+}

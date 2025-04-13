@@ -1,34 +1,50 @@
-// Автоматический расчет текущего года для футера
-document.addEventListener("DOMContentLoaded", () => {
-    // Получаем текущий год
+const startTime = performance.now();
+
+window.addEventListener("load", () => {
+  const minDelay = 2000; // минимум 2 секунды
+  const timePassed = performance.now() - startTime;
+  const remainingTime = Math.max(0, minDelay - timePassed);
+  // Выполняем после полной загрузки страницы, скриптов, стилей и прочего
+  setTimeout(() => {
+    // Расчет текущего года
     const currentYear = new Date().getFullYear();
-    // Вставляем текущий год в элемент с id="year_creation"
-    const yearElement = document.getElementById('year_creation');
+    const yearElement = document.getElementById("year_creation");
     if (yearElement) {
-        yearElement.textContent = currentYear;
+      yearElement.textContent = currentYear;
     }
 
-    // Автоматический расчет возраста
-    const birthDate = new Date(2004, 7, 7); // Укажи свою дату рождения
+    // Расчет возраста
+    const birthDate = new Date(2004, 6, 7); // 7 июля 2004
     const today = new Date();
     let age = today.getFullYear() - birthDate.getFullYear();
-
-    // Проверяем, был ли день рождения в текущем году
-    const monthDiff = today.getMonth() - birthDate.getMonth();
-    const dayDiff = today.getDate() - birthDate.getDate();
-
-    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-        age--; // Если день рождения ещё не прошёл, уменьшаем возраст
+    if (
+      today.getMonth() < birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() &&
+        today.getDate() < birthDate.getDate())
+    ) {
+      age--;
     }
+    document.getElementById("age").textContent = age;
 
-    const ageElement = document.getElementById("age");
-    if (ageElement) {
-        ageElement.textContent = age;
-    }
+    // TODO: Подгрузи переводы перед снятием прелоадера, если translations.js работает асинхронно
+
+    // После установки всех данных — убираем прелоадер
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hidden");
+
+    // Удаляем прелоадер после анимации скрытия
+    setTimeout(() => {
+      preloader.style.display = "none";
+
+      // Только теперь запускаем анимацию появления элементов
+      const elements = document.querySelectorAll(
+        ".avatar, h1, .info-block, .section-divider, a.button, footer"
+      );
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add("animate-drop");
+        }, index * 100);
+      });
+    }, 600);
+  }, remainingTime);
 });
-
-function changeLanguage() {
-    // Redirect to your language-specific page or toggle language.
-    window.location.href = "/en"; // Update with your language-specific URL.
-}
-
