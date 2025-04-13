@@ -54,8 +54,9 @@ body {
 }
 
 .avatar img {
-  width: 150px;
-  height: 150px; /* Явно задаем высоту */
+  width: 100%;
+  max-width: 150px;
+  height: auto; /* Автоматическая высота по пропорциям */
   border-radius: 50%; /* Круглый аватар */
   display: block; /* Центрирование аватара */
   margin: 0 auto; /* Горизонтальное центрирование */
@@ -234,6 +235,10 @@ footer {
   text-indent: 0.2em; /* Это будет более точно соответствовать одному пробелу */
 }
 
+.animate-drop {
+  animation: fadeDrop 0.8s ease-out forwards;
+}
+
 @keyframes fadeDrop {
   from {
     opacity: 0;
@@ -243,9 +248,6 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
-}
-.animate-drop {
-  animation: fadeDrop 0.8s ease-out forwards;
 }
 
 .avatar,
@@ -276,8 +278,6 @@ footer {
   pointer-events: none;
 }
 
-
-
 /* Отдельный контейнер, чтобы не мешать .container из лендинга */
 .preloader-circles {
   position: relative;
@@ -299,12 +299,12 @@ footer {
   transform-style: preserve-3d;
   transform: rotateX(70deg) translateZ(50px);
   animation: animate 3s ease-in-out calc(var(--i) * 0.08s) infinite;
-  box-shadow: 0 0 15px rgb(124, 124, 124),
-              inset 0 0 15px rgb(124, 124, 124);
+  box-shadow: 0 0 15px rgb(124, 124, 124), inset 0 0 15px rgb(124, 124, 124);
 }
 
 @keyframes animate {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotateX(70deg) translateZ(50px) translateY(0);
     filter: hue-rotate(0);
   }
@@ -314,4 +314,3 @@ footer {
     filter: hue-rotate(360deg);
   }
 }
-
