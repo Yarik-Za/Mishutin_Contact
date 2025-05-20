@@ -40,8 +40,8 @@ async function loadTranslations(lang) {
       { id: "email-label", key: "email_label" },
      //{ id: "resume-label", key: "resume_label" },
       { id: "finance-label", key: "finance_label" },
-      { id: "monobank-label", key: "monobank_label" },
-      { id: "privat-label", key: "privat_label" },
+      { id: "mono-donate-label", key: "mono_donate_label" },
+      { id: "privat-donate-label", key: "privat_donate_label" },
       //{ id: "tips-label", key: "tips_label" },
     ];
 

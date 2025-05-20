@@ -10,7 +10,7 @@
   "email_label": "Эл.Почта:",
   
   "finance_label": "Финансы",
-  "monobank_label": "Отправить перевод Monobank",
-  "privat_label": "Отправить перевод ПриватБанк"
+  "mono_donate_label": "Отправить перевод Monobank",
+  "privat_donate_label": "Отправить перевод ПриватБанк"
   
 }

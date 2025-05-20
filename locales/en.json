@@ -10,7 +10,7 @@
   "email_label": "Email:",
   
   "finance_label": "Finance",
-  "monobank_label": "Send Money to Monobank",
-  "privat_label": "Send Money to PrivatBank"
+  "mono_donate_label": "Send Money to Monobank",
+  "privat_donate_label": "Send Money to PrivatBank"
   
 }
