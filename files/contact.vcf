@@ -1,19 +1,14 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:Ярик Зайченко
-N:Зайченко;Ярик;;;
-EMAIL;TYPE=INTERNET;TYPE=HOME:yarikyarik20017@gmail.com
-EMAIL;TYPE=INTERNET;TYPE=WORK:bachokplaymobgames@gmail.com
-EMAIL;TYPE=INTERNET;TYPE=WORK:y.i.zaichenko@student.khai.edu
-TEL;TYPE=MAIN:+380 93 661 2615
-TEL;TYPE=CELL:+380 96 858 6206
-TEL;TYPE=WORK:+380 951 357 596
-ORG:Общепит
-TITLE:Бармен - официант
-BDAY:20040707
+FN:Станислав Мишутин
+N:Мишутин;Станислав;;;
+EMAIL;TYPE=INTERNET;TYPE=HOME:mishasacvoyage@gmail.com
+TEL;TYPE=MAIN:+380 96 793 5423
+TITLE:Бармен
+BDAY:19890228
 item1.URL:https\://yarik-za.github.io/NFC_Contact/
 item1.X-ABLabel:
 NOTE:Viber: +380936612615\nTelegram: t.me/yarik_za\nInstagram: http\://inst
- agram.com/yarik.za_
+ agram.com/s.mishutin/
 CATEGORIES:myContacts
 END:VCARD
