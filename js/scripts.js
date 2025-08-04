@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
     }
 
     // Расчет возраста
-    const birthDate = new Date(2004, 6, 7); // 7 июля 2004
+    const birthDate = new Date(1989, 2, 28);
     const today = new Date();
     let age = today.getFullYear() - birthDate.getFullYear();
     if (
