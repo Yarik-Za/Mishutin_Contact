@@ -24,17 +24,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html, body {
+  height: 100%;
+  margin: 0;
+}
 body {
   font-family: "MR", Arial, sans-serif; /* Добавьте резервные шрифты */
   font-weight: 500; /* Использует medium */
   background: linear-gradient(135deg, #56555a, #000000);
   color: #fff;
   text-align: center;
-  display: block;
-  padding: 10px 0; /* Отступы сверху и снизу */
+  display: flex;
+  padding: 0; /* Отступы сверху и снизу */
   justify-content: center;
   align-items: center;
+  height: 100%;
   min-height: 100vh;
 }
 #name {
