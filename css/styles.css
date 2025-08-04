@@ -28,7 +28,7 @@
 body {
   font-family: "MR", Arial, sans-serif; /* Добавьте резервные шрифты */
   font-weight: 500; /* Использует medium */
-  background: linear-gradient(135deg, #ff9a00, #ff5f00);
+  background: linear-gradient(135deg, #56555a, #000000);
   color: #fff;
   text-align: center;
   display: block;
@@ -37,11 +37,17 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+#name {
+  white-space: nowrap;
+  max-width: 100%;
+  display: inline-block; /* чтобы измерять */
+  font-size: clamp(1.2rem, 5vw, 2rem); /* адаптивный размер */
+}
 
 .container {
   margin: 0 auto;
   padding: 10px; /*  отступы по 10px */
-  max-width: 350px;
+  max-width: 370px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -57,7 +63,7 @@ body {
   width: 100%;
   max-width: 150px;
   height: auto; /* Автоматическая высота по пропорциям */
-  border-radius: 50%; /* Круглый аватар */
+  border-radius: 25%; /* Круглый аватар */
   display: block; /* Центрирование аватара */
   margin: 0 auto; /* Горизонтальное центрирование */
 }
@@ -107,6 +113,17 @@ footer {
   font-family: "MR", Arial, sans-serif; /* Добавьте резервные шрифты */
   font-weight: 500; /* Использует medium */
 }
+
+.footer-link {
+  color: inherit; /* не синий, а как обычный текст */
+  text-decoration: none; /* убрать подчёркивание */
+  cursor: pointer;
+}
+.footer-link:focus-visible,
+.footer-link:hover {
+  text-decoration: underline; /* опционально: показывать при наведении/focus */
+}
+
 .section-divider {
   display: flex;
   align-items: center;
@@ -148,7 +165,7 @@ footer {
 .round-button {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #ff9a00, #ff5f00); /* Яркий градиент */
+  background: linear-gradient(135deg, #56555a, #2a2a2c); /* Яркий градиент */
   color: #fff;
   border-radius: 50%; /* Круглая форма */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -164,7 +181,7 @@ footer {
 .round-button-animated {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #ff9a00, #ff5f00); /* Яркий градиент */
+  background: linear-gradient(135deg, #56555a, #2a2a2c); /* Яркий градиент */
   color: #fff;
   border-radius: 50%; /* Круглая форма */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -178,7 +195,7 @@ footer {
 
   border: 2px solid white; /* Белая обводка */
 
-  box-shadow: 0 6px 15px rgba(255, 95, 0, 0.7); /* Усиленная тень всегда */
+  box-shadow: 0 6px 15px #2a2a2c; /* Усиленная тень всегда */
 
   position: relative;
   overflow: hidden;
@@ -216,8 +233,8 @@ footer {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Усиленная тень */
   background: linear-gradient(
     135deg,
-    #ffbf00,
-    #ff6600
+    #56555a,
+    #000000
   ); /* Изменение градиента при наведении */
 }
 

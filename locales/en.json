@@ -1,16 +1,15 @@
 {
-  "title": "Yarik Zaichenko | Contacts",
-  "name": "Yarik Zaichenko🐰",
+  "title": "Stanislav Mishutin | Contacts",
+  "name": "Stanislav Mishutin🧳",
   "age_label": "Age:",
   "age_years_text": "Years old",
   "birth_date_label": "BirthDay:",
-  "birth_date": "July 7th, 2004",
+  "birth_date": "February 28th, 1989",
   "phone_label": "Phone",
   "social_label": "Social",
   "email_label": "Email:",
-  
+
   "finance_label": "Finance",
   "mono_donate_label": "Send Money to Monobank",
   "privat_donate_label": "Send Money to PrivatBank"
-  
 }
